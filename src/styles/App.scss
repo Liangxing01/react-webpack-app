@@ -69,7 +69,7 @@ html,body{
         box-sizing: border-box;
         text-align: center;
         color: #666;
-        transform:rotateY(180deg);
+        transform:rotateY(180deg) translateZ(1px);
         background: #fff;
       }
     }
@@ -86,5 +86,39 @@ html,body{
   width:100%;
 
   text-align: center;
+  @at-root{
+    .controller-unit{
+      display: inline-block;
+      margin: 0 5px;
+      width: 30px;
+      height: 30px;
+
+      text-align: center;
+      vertical-align: middle;
+
+      cursor: pointer;
+      background-color: #ccc;
+      border-radius: 50%;
+
+      transform: scale(.5);
+      transition: transform .6s ease-in-out, background-color .3s;
+
+      &.is-center{
+        background-color: #888;
+        transform:scale(1);
+
+        &::after{
+          background: url(../images/icon.png) no-repeat center;
+        }
+
+        &.is-inverse{
+          bakcground-color: #555;
+
+          transform: rotateY(180deg);
+        }
+      }
+    }
+  }
+
 }
 /* controller --- end*/
