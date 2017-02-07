@@ -99,7 +99,7 @@ html,body{
       border-radius: 50%;
 
       transform: scale(.5);
-      transition: transform .6s ease-in-out, background-color .3s;
+      transition: transform .6s ease-in-out, background-color .3s ease-in-out;
 
       &.is-center{
         background-color: #888;
